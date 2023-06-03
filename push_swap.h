@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:46:37 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/05/31 18:17:37 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/03 20:58:08 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,11 @@ typedef struct s_node
 	struct s_node	*next;
 }	t_node;
 
-typedef struct s_info
+typedef struct s_deque
 {
-	int		*arr;
-	int		size_a;
-	int		size_b;
-	t_node	*top_a;
-	t_node	*top_b;
-	t_node	*bottom_a;
-	t_node	*bottom_b;
-}	t_info;
+	int		size;
+	t_node	*front;
+	t_node	*back;
+}	t_deque;
 
 #endif
