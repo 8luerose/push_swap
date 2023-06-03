@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 19:44:24 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/03 20:56:39 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/03 21:01:40 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,3 +73,4 @@ void	pop_front(t_deque *d)
 		d->front->prev = NULL;
 	free (node);
 }
+//1.return(front) 따로 만들어줘야 함 -> 2.pop_front 순서
