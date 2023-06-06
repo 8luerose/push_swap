@@ -6,8 +6,20 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:10:39 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/01 18:24:17 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/06 21:15:48 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	sa(t_)
+#include "push_swap.h"
+
+void	sa(t_deque *deque_a)
+{
+	int	*tmp;
+
+	if (deque_a->size > 1)
+	{
+		tmp = deque_a->front->data;
+		deque_a->front->data = deque_a->front->next->data;
+		deque_a->front->next->data = tmp;
+	}
+}
