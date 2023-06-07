@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:10:39 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/06 21:15:48 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/07 18:00:18 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,15 @@ void	sa(t_deque *deque_a)
 		deque_a->front->data = deque_a->front->next->data;
 		deque_a->front->next->data = tmp;
 	}
+}
+
+void	sb(t_deque *deque_b)
+{
+	sa(deque_b);
+}
+
+void	ss(t_deque *deque_a, t_deque *deque_b)
+{
+	sa(deque_a);
+	sb(deque_b);
 }
