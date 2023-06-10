@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:06:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/06 20:27:25 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/10 19:21:27 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,13 @@ void	push_back(t_deque *deque, int data)
 	deque->size++;
 }
 
-int	pop_front(t_deque *deque)
+void	pop_front(t_deque *deque)
 {
 	t_node	*temp;
 	int		data;
 
 	if (deque->size == 0)
-		return (-1);
+		return ;
 	temp = deque->front;
 	data = deque->front->data;
 	deque->front = deque->front->next;
@@ -71,16 +71,15 @@ int	pop_front(t_deque *deque)
 		deque->back = NULL;
 	free(temp);
 	deque->size--;
-	return (data);
 }
 
-int	pop_back(t_deque *deque)
+void	pop_back(t_deque *deque)
 {
 	t_node	*temp;
 	int		data;
 
 	if (deque->size == 0)
-		return (-1);
+		return ;
 	temp = deque->back;
 	data = deque->back->data;
 	deque->back = deque->back->prev;
@@ -90,5 +89,4 @@ int	pop_back(t_deque *deque)
 		deque->front = NULL;
 	free(temp);
 	deque->size--;
-	return (data);
 }

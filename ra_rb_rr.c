@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 19:36:01 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/07 20:00:46 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/10 19:21:22 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,31 @@
 
 void	ra(t_deque *deque_a)
 {
-	t_node	*p;
+	int	node_data;
 
 	if (deque_a->size > 1)
 	{
-		p = deque_a->front;
-		deque_a->front = deque_a->front->next;
-		deque_a->front->prev = NULL;
-		p->next = NULL;
-		p->prev = deque_a->back;
-		deque_a->back->next = p;
-		deque_a->back = p;
+		node_data = find_node_front(deque_a);
+		pop_front(deque_a);
+		push_back(deque_a, node_data);
 	}
 }
+
+// void	ra(t_deque *deque_a)
+// {
+// 	t_node	*p;
+
+// 	if (deque_a->size > 1)
+// 	{
+// 		p = deque_a->front;
+// 		deque_a->front = deque_a->front->next;
+// 		deque_a->front->prev = NULL;
+// 		p->next = NULL;
+// 		p->prev = deque_a->back;
+// 		deque_a->back->next = p;
+// 		deque_a->back = p;
+// 	}
+// }
 
 void	rb(t_deque *deque_b)
 {
