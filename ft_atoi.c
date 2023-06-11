@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/31 18:18:12 by taehkwon          #+#    #+#             */
+/*   Created: 2023/06/11 19:56:31 by taehkwon          #+#    #+#             */
 /*   Updated: 2023/06/11 20:03:48 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+static int	ft_isspace(char c)
 {
-	int		i;
-	int		j;
-	int		array_size;
-	int		*num_array;
-	t_deque	*deque_a;
-	t_deque	*deque_b;
-	char	**str;
+	if (c == ' ' || (c >= 9 && c <= 13))
+		return (1);
+	else
+		return (0);
+}
 
-	if (ac < 2)
-		print_error();
-	deque_a = deque_init();
-	deque_b = deque_init();
-	i = 1;
-	while (i < ac)
+int	ft_atoi(const char *str)
+{
+	long		result;
+	int			i;
+	int			sign;
+	int			length;
+
+	result = 0;
+	i = 0;
+	while (ft_isspace(*str))
+		str++;
+	sign = 1;
+	if (*str == '-')
+		sign = -1;
+	if (*str == '+' || *str == '-')
+		str++;
+	length = 0;
+	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 	{
-		str = ft_split(av[i], ' ');
-		j = 0;
-		while (str[j])
-		{
-			
-		}
+		result = result * 10 + (str[i] - '0');
+		i++;
+		length++;
 	}
+	return (result * sign);
 }
