@@ -1,40 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/31 18:18:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/12 20:30:12 by taehkwon         ###   ########.fr       */
+/*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
+/*   Updated: 2023/06/12 20:30:10 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int	main(int ac, char **av)
+int	*split_to_atoi(int ac, char **av)
 {
 	int		i;
 	int		j;
-	int		*arr;
-	t_deque	*deque_a;
-	t_deque	*deque_b;
+	int		k;
 	char	**str;
-
-	if (ac < 2)
-		print_error();
-	deque_a = deque_init();
-	deque_b = deque_init();
-	str = 
-
-	i = 1;
-	while (i < ac)
+	int		*result;
+	
+	i = 0;
+	while (++i < ac)
 	{
 		str = ft_split(av[i], ' ');
-		j = 0;
-		while (str[j])
+		j = -1;
+		while (str[++j])
 		{
-			
+			result = ft_atoi(str);
+		}
+	}
+}
+
+int	is_sorted(int ac, char **av)
+{
+	int	i;
+	int	j;
+	int	tmp;
+	int	cnt;
+
+	cnt = 0;
+	i = 0;
+	while (i < ac - 1)
+	{
+		j = 0;
+		while (j < ac - 1 - i)
+		{
+			if ()
 		}
 	}
 }

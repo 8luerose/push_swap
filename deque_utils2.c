@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:06:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/11 20:03:49 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/12 20:30:19 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	print_error(void)
 {
 	write(2, "Error\n", 6);
 	exit(1);
-	return ;
 }
 
 // t_node	*search_front(t_deque *deque)
