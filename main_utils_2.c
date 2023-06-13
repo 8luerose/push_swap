@@ -1,50 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_utils.c                                       :+:      :+:    :+:   */
+/*   main_utils_2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/12 20:30:10 by taehkwon         ###   ########.fr       */
+/*   Created: 2023/06/13 19:09:41 by taehkwon          #+#    #+#             */
+/*   Updated: 2023/06/13 20:31:28 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	*split_to_atoi(int ac, char **av)
-{
-	int		i;
-	int		j;
-	int		k;
-	char	**str;
-	int		*result;
-	
-	i = 0;
-	while (++i < ac)
-	{
-		str = ft_split(av[i], ' ');
-		j = -1;
-		while (str[++j])
-		{
-			result = ft_atoi(str);
-		}
-	}
-}
+#include "push_swap.h"
 
-int	is_sorted(int ac, char **av)
+int	size_check(int ac, char **av)
 {
 	int	i;
-	int	j;
-	int	tmp;
-	int	cnt;
+	int	size;
+	int	*result;
 
-	cnt = 0;
+	size = 0;
+	while (av[size])
+		size++;
+	result = (int *)malloc(sizeof(int) * size);
+	if (!result)
+		return (NULL);
 	i = 0;
-	while (i < ac - 1)
-	{
-		j = 0;
-		while (j < ac - 1 - i)
-		{
-			if ()
-		}
-	}
+	while ()
 }
