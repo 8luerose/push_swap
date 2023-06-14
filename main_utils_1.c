@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/13 20:31:29 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/14 20:35:42 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,17 @@ int	*split_to_atoi(int ac, char **av, t_deque *deque_a)
 	char	**str;
 	int		*result;
 
- 	i = 0;
+	i = 0;
 	while (++i < ac)
 	{
 		str = ft_split(av[i], ' ');
-		if(!str)
+		if (!str)
 			return (NULL);
 		j = -1;
 		while (str[++j])
 			push_back(deque_a, ft_atoi(str[j]));
-		result = making_arr(deque_a);
-		check_sort(result, deque_a, 0);
 	}
+	result = making_arr(deque_a);
 	return (result);
 }
 
@@ -50,7 +49,7 @@ int	*making_arr(t_deque *deque_a)
 	{
 		result[cnt] = p->data;
 		cnt++;
-		p = p->next; 
+		p = p->next;
 	}
 	return (result);
 }
@@ -76,10 +75,33 @@ void	check_sort(int *arr, t_deque *deque_a, int i)
 			}
 			j++;
 		}
-		if (arr[i] == arr[i+1])
+		if (arr[i] == arr[i + 1])
 			print_error();
 		i++;
 	}
 	if (cnt == 0)
 		print_error();
+}
+
+void	indexing_list(int *arr, t_deque *deque_a)
+{
+	int		j;
+	t_node	*p;
+
+// 1 2 3 4 5 6
+	p = deque_a->front;
+	while (p)
+	{
+		j = 0;
+		while (j < deque_a->size)
+		{
+			if (arr[j] == p->data)
+			{
+				p->data = j;
+				break ;
+			}
+			j++;
+		}
+		p = p->next;
+	}
 }
