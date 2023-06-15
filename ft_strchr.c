@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra_rb_rr.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 19:36:01 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/15 18:31:55 by taehkwon         ###   ########.fr       */
+/*   Created: 2023/06/15 18:18:54 by taehkwon          #+#    #+#             */
+/*   Updated: 2023/06/15 18:19:11 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_deque *deque_a)
+char	*ft_strchr(const char *s, int c)
 {
-	int	node_data;
+	size_t	i;
 
-	if (deque_a->size > 1)
+	i = 0;
+	while (s[i])
 	{
-		node_data = find_data_front(deque_a);
-		pop_front(deque_a);
-		push_back(deque_a, node_data);
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i++;
 	}
-}
-
-void	rb(t_deque *deque_b)
-{
-	ra(deque_b);
-}
-
-void	rr(t_deque *deque_a, t_deque *deque_b)
-{
-	ra(deque_a);
-	rb(deque_b);
+	if ((char)c == '\0')
+		return ((char *)s + i);
+	return (0);
 }

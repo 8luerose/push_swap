@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:06:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/13 20:31:31 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/15 17:28:55 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,3 @@ void	print_error(void)
 	write(2, "Error\n", 6);
 	exit(1);
 }
-
-// t_node	*search_front(t_deque *deque)
-// {
-// 	t_node	*temp;
-// 	int		data;
-
-// 	if (deque->size == 0)
-// 		return ;
-// 	temp = deque->front;
-// 	data = deque->front->data;
-// 	deque->front = deque->front->next;
-// 	if (deque->front != NULL)
-// 		deque->front->prev = NULL;
-// 	else
-// 		deque->back = NULL;
-// 	free(temp);
-// 	deque->size--;
-// 	return (data);
-// }

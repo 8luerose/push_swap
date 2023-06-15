@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/14 20:35:42 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/15 19:03:36 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	*split_to_atoi(int ac, char **av, t_deque *deque_a)
 {
 	int		i;
 	int		j;
-	int		k;
 	char	**str;
 	int		*result;
 
@@ -40,10 +39,10 @@ int	*making_arr(t_deque *deque_a)
 	int		cnt;
 	t_node	*p;
 
-	p = deque_a->front;
 	result = (int *)malloc(sizeof(int) * deque_a->size);
 	if (!result)
 		return (NULL);
+	p = deque_a->front;
 	cnt = 0;
 	while (cnt < deque_a->size)
 	{
@@ -61,11 +60,13 @@ void	check_sort(int *arr, t_deque *deque_a, int i)
 	int	cnt;
 
 	cnt = 0;
+	printf("\ndeque_a->size= %d\n", deque_a->size);
 	while (i < deque_a->size)
 	{
 		j = 0;
 		while (j < deque_a->size - 1)
 		{
+			//printf("\narr[j]= %d\n", arr[j]);
 			if (arr[j] > arr[j + 1])
 			{
 				tmp = arr[j];
@@ -76,31 +77,36 @@ void	check_sort(int *arr, t_deque *deque_a, int i)
 			j++;
 		}
 		if (arr[i] == arr[i + 1])
+		{
+			printf("\nsame\n");
 			print_error();
+		}
 		i++;
 	}
 	if (cnt == 0)
+	{
+		printf("\ncnt=0\n");
 		print_error();
+	}
 }
 
 void	indexing_list(int *arr, t_deque *deque_a)
 {
-	int		j;
+	int		i;
 	t_node	*p;
 
-// 1 2 3 4 5 6
 	p = deque_a->front;
 	while (p)
 	{
-		j = 0;
-		while (j < deque_a->size)
+		i = 0;
+		while (i < deque_a->size)
 		{
-			if (arr[j] == p->data)
+			if (arr[i] == p->data)
 			{
-				p->data = j;
+				p->data = i;
 				break ;
 			}
-			j++;
+			i++;
 		}
 		p = p->next;
 	}

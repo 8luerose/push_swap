@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:10:39 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/14 20:35:20 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/15 18:30:12 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sa(t_deque *deque_a)
 {
-	int	*tmp;
+	int	tmp;
 
 	if (deque_a->size > 1)
 	{

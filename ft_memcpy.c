@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra_rb_rr.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 19:36:01 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/15 18:31:55 by taehkwon         ###   ########.fr       */
+/*   Created: 2023/06/15 18:31:15 by taehkwon          #+#    #+#             */
+/*   Updated: 2023/06/15 18:31:26 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_deque *deque_a)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int	node_data;
+	unsigned char	*dst_p;
+	unsigned char	*src_p;
 
-	if (deque_a->size > 1)
+	dst_p = (unsigned char *)dst;
+	src_p = (unsigned char *)src;
+	if (n == 0 || dst == src)
+		return (dst);
+	while (n--)
 	{
-		node_data = find_data_front(deque_a);
-		pop_front(deque_a);
-		push_back(deque_a, node_data);
+		*dst_p = *src_p;
+		dst_p++;
+		src_p++;
 	}
-}
-
-void	rb(t_deque *deque_b)
-{
-	ra(deque_b);
-}
-
-void	rr(t_deque *deque_a, t_deque *deque_b)
-{
-	ra(deque_a);
-	rb(deque_b);
+	return (dst);
 }

@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra_rb_rr.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 19:36:01 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/15 18:31:55 by taehkwon         ###   ########.fr       */
+/*   Created: 2023/06/15 18:19:58 by taehkwon          #+#    #+#             */
+/*   Updated: 2023/06/15 18:20:08 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_deque *deque_a)
+char	*ft_strdup(const char *s1)
 {
-	int	node_data;
+	char	*arr;
+	size_t	len;
+	size_t	i;
 
-	if (deque_a->size > 1)
+	len = ft_strlen(s1);
+	arr = (char *)malloc((len + 1) * (sizeof(char)));
+	if (!(arr))
+		return (0);
+	i = 0;
+	while (s1[i] != '\0')
 	{
-		node_data = find_data_front(deque_a);
-		pop_front(deque_a);
-		push_back(deque_a, node_data);
+		arr[i] = s1[i];
+		i++;
 	}
-}
-
-void	rb(t_deque *deque_b)
-{
-	ra(deque_b);
-}
-
-void	rr(t_deque *deque_a, t_deque *deque_b)
-{
-	ra(deque_a);
-	rb(deque_b);
+	arr[len] = '\0';
+	return (arr);
 }
