@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/15 19:03:36 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/15 19:09:31 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,11 @@ void	check_sort(int *arr, t_deque *deque_a, int i)
 	int	cnt;
 
 	cnt = 0;
-	printf("\ndeque_a->size= %d\n", deque_a->size);
 	while (i < deque_a->size)
 	{
 		j = 0;
 		while (j < deque_a->size - 1)
 		{
-			//printf("\narr[j]= %d\n", arr[j]);
 			if (arr[j] > arr[j + 1])
 			{
 				tmp = arr[j];
@@ -77,17 +75,11 @@ void	check_sort(int *arr, t_deque *deque_a, int i)
 			j++;
 		}
 		if (arr[i] == arr[i + 1])
-		{
-			printf("\nsame\n");
 			print_error();
-		}
 		i++;
 	}
 	if (cnt == 0)
-	{
-		printf("\ncnt=0\n");
 		print_error();
-	}
 }
 
 void	indexing_list(int *arr, t_deque *deque_a)

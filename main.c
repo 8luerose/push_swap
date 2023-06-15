@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 18:18:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/15 19:05:58 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/15 19:11:08 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
 	arr = split_to_atoi(ac, av, deque_a);
 	i = -1;
 	while (++i < deque_a->size)
-		printf(",%d ", arr[i]);
+		printf("%d ", arr[i]);
 	printf("--arr end--\n");
 	check_sort(arr, deque_a, 0);
 	i = -1;
