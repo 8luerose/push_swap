@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 19:56:31 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/14 20:35:30 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/16 18:48:47 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 		str++;
 		length++;
 	}
-	return (result * sign);
+	result = result * sign;
 	if (*str != '\0' || length > 10
 		|| result > 2147483647 || result < -2147483648)
 		print_error();

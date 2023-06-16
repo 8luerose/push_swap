@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 18:18:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/15 19:11:08 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/16 20:27:27 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ int	main(int ac, char **av)
 		p = p->next;
 	}
 	printf("--deque end--\n");
+	//push_swap(deque_a, deque_b);
 }

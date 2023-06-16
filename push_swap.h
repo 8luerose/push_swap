@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:46:37 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/15 18:32:58 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/16 20:09:56 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,7 @@ int		*split_to_atoi(int ac, char **av, t_deque *deque_a);
 int		*making_arr(t_deque *deque_a);
 void	check_sort(int *arr, t_deque *deque_a, int i);
 void	indexing_list(int *arr, t_deque *deque_a);
+void	sort_3(t_deque *deque);
+void	sort_5(t_deque *deque);
 
 #endif
