@@ -6,7 +6,7 @@
 /*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:04:50 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 01:34:26 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/18 01:07:23 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	find_index(t_deque *deque, int data)
 	return (-1);
 }
 
-int	ft_max(t_deque *deque)
+static int	ft_max(t_deque *deque)
 {
 	int		max;
 	t_node	*p;
@@ -47,7 +47,7 @@ int	ft_max(t_deque *deque)
 	return (max);
 }
 
-int	ft_min(t_deque *deque)
+static int	ft_min(t_deque *deque)
 {
 	int		min;
 	t_node	*p;
@@ -68,7 +68,7 @@ int	ft_min(t_deque *deque)
 void	sort_3(t_deque *deque)
 {
 	int		max;
-	// t_node	*p;
+	t_node	*p;
 
 	if (deque->size < 2)
 		return ;
@@ -98,7 +98,7 @@ void	sort_5(t_deque *deque_a, t_deque *deque_b)
 	int		min;
 	int		mid;
 	int		idx;
-	// t_node	*p;
+	t_node	*p;
 
 	if (deque_a->size < 2)
 		return ;
@@ -108,20 +108,22 @@ void	sort_5(t_deque *deque_a, t_deque *deque_b)
 	{
 		while (deque_a->size > 3)
 		{
+			mid = deque_a->size / 2;
 			min = ft_min(deque_a);
 			idx = find_index(deque_a, min);
-			if (idx > deque_a->size / 2)
-				while (deque_a->front->data != min)
-					rra(deque_a);
-			else
-				while (deque_a->front->data != min)
+			if (idx + 1 == deque_a->size - 1)
+				sa(deque_a);
+			while (find_data_front(deque_a) != min)
+			{
+				if (mid < idx)
 					ra(deque_a);
-			pb(deque_a, deque_b);
+				else
+					rra(deque_a);
+			}
+			pb(deque_a,deque_b);
 		}
 		sort_3(deque_a);
-		if (deque_b->size == 2 && deque_b->front->data < deque_b->front->next->data)
-			sb(deque_b);
-		while (deque_b->size > 0)
+		while (deque_b->front)
 			pa(deque_a, deque_b);
 	}
 

@@ -3,22 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 20:11:16 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/17 19:44:19 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/18 01:32:51 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_swap(t_deque *a, t_deque *b)
+void push_swap(t_deque *deque_a, t_deque *deque_b)
 {
-	int	chunk;
-	int	data_size;
+	int chunk;
+	int max;
+	int min;
+	int i;
 
-	data_size = a->size;
-	chunk = (data_size / 10) * 5 + 7;
-	a_to_b(a, b, chunk, 1);
-	b_to_a(a, b, data_size - 1);
+	if (deque_a->size <= 3)
+		sort_3(deque_a);
+	else if (deque_a->size <= 5)
+		sort_5(deque_a, deque_b);
+	else
+	{
+		chunk = (deque_a->size / 5);
+		max = ft_max(deque_a);
+		min = ft_min(deque_a);
+		i = min;
+		while (i < max - chunk)
+		{
+			a_to_b(deque_a, deque_b, chunk, i);
+			i += chunk;
+		}
+		a_to_b(deque_a, deque_b, chunk, i);
+		push_swap(deque_a, deque_b);
+		b_to_a(deque_a, deque_b, ft_max(deque_b));
+	}
 }

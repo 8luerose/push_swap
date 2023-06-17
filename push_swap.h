@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:46:37 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/17 20:28:00 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/18 01:32:46 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,10 @@ int		*split_to_atoi(int ac, char **av, t_deque *deque_a);
 int		*making_arr(t_deque *deque_a);
 void	check_sort(int *arr, t_deque *deque_a, int i);
 void	indexing_list(int *arr, t_deque *deque_a);
+int		ft_max(t_deque *deque);
+int		ft_min(t_deque *deque);
 void	sort_3(t_deque *deque);
-void	sort_5(t_deque *deque);
+void	sort_5(t_deque *deque_a, t_deque *deque_b);
 void	push_swap(t_deque *a, t_deque *b);
 void	a_to_b(t_deque *a, t_deque *b, int chunk, int i);
 int		max_location(t_deque *b, int max);
