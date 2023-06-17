@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 18:03:57 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/14 20:35:26 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:18:55 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,11 @@ void	pa(t_deque *deque_a, t_deque *deque_b)
 		deque_a->front = p;
 		deque_a->size++;
 	}
+	write (1, "pa\n", 3);
 }
 
 void	pb(t_deque *deque_a, t_deque *deque_b)
 {
 	pa(deque_b, deque_a);
+	write (1, "pb\n", 3);
 }

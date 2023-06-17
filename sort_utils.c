@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:04:50 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/16 20:07:14 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/17 20:27:47 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ static int	ft_min(t_deque *deque)
 
 void	sort_3(t_deque *deque)
 {
-	int	max;
+	int		max;
+	t_node	*p;
 
 	if (deque->size < 2)
 		return ;
@@ -64,6 +65,13 @@ void	sort_3(t_deque *deque)
 		if (find_data_front(deque) > deque->front->next->data)
 			sa(deque);
 	}
+	p = deque->front;
+	while (p)
+	{
+		printf("%d ", p->data);
+		p = p->next;
+	}
+	printf("---sort3---\n");
 }
 
 void	sort_5(t_deque *deque)
