@@ -6,7 +6,7 @@
 /*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 20:11:16 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 01:32:51 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/18 06:09:06 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void push_swap(t_deque *deque_a, t_deque *deque_b)
 		}
 		a_to_b(deque_a, deque_b, chunk, i);
 		push_swap(deque_a, deque_b);
-		b_to_a(deque_a, deque_b, ft_max(deque_b));
+		b_to_a(deque_a, deque_b, max);
 	}
 }

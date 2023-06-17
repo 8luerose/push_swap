@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 18:03:57 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/17 19:18:55 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/18 05:22:50 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,24 @@ void	pa(t_deque *deque_a, t_deque *deque_b)
 
 void	pb(t_deque *deque_a, t_deque *deque_b)
 {
-	pa(deque_b, deque_a);
+	t_node	*p;
+
+	if (deque_a->size > 0)
+	{
+		p = deque_a->front;
+		deque_a->front = deque_a->front->next;
+		if (deque_a->front)
+			deque_a->front->prev = NULL;
+		else
+			deque_a->back = NULL;
+		deque_a->size--;
+		p->next = deque_b->front;
+		if (deque_b->front)
+			deque_b->front->prev = p;
+		else
+			deque_b->back = p;
+		deque_b->front = p;
+		deque_b->size++;
+	}
 	write (1, "pb\n", 3);
 }
