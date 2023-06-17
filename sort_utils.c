@@ -6,7 +6,7 @@
 /*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:04:50 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 05:59:06 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/18 06:14:56 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_max(t_deque *deque)
 		if (p->data > max)
 			max = p->data;
 		p = p->next;
-		printf("***%d\n", max);
+		//printf("***%d\n", max);
 	}
 	return (max);
 }
@@ -71,22 +71,22 @@ void	sort_3(t_deque *deque)
 	int		max;
 	t_node	*p;
 
-	p = deque->front;
-		while (p)
-		{
-			printf("%d ", p->data);
-			p = p->next;
-		}
-		printf("---test1_A---\n");
+	// p = deque->front;
+	// 	while (p)
+	// 	{
+	// 		printf("%d ", p->data);
+	// 		p = p->next;
+	// 	}
+	// 	printf("---test1_A---\n");
 	
 	if (deque->size < 2)
 		return ;
 	max = ft_max(deque);
-	printf("**%d %d\n",max, find_data_front(deque));
+	//printf("**%d %d\n",max, find_data_front(deque));
 	if (find_data_front(deque) == max)
 	{
 		ra(deque);
-		printf("**rara\n");
+		//printf("**rara\n");
 	}
 	if (deque->front->next->next)
 	{
@@ -97,13 +97,13 @@ void	sort_3(t_deque *deque)
 	}
 
 
-	p = deque->front;
-	while (p)
-	{
-		printf("%d ", p->data);
-		p = p->next;
-	}
-	printf("---sort3---\n");
+	// p = deque->front;
+	// while (p)
+	// {
+	// 	printf("%d ", p->data);
+	// 	p = p->next;
+	// }
+	// printf("---sort3---\n");
 }
 
 void	sort_5(t_deque *deque_a, t_deque *deque_b)
@@ -134,33 +134,33 @@ void	sort_5(t_deque *deque_a, t_deque *deque_b)
 					p = deque_a->front;
 					while (p)
 					{
-						printf("%d ", p->data);
+						//printf("%d ", p->data);
 						p = p->next;
 					}
-					printf("---test4_A---\n");
+					//printf("---test4_A---\n");
 				}
 				else
 					rra(deque_a);
 			}
 
-			p = deque_a->front;
-			while (p)
-			{
-				printf("%d ", p->data);
-				p = p->next;
-			}
-			printf("---test3_A---\n");
+			// p = deque_a->front;
+			// while (p)
+			// {
+			// 	printf("%d ", p->data);
+			// 	p = p->next;
+			// }
+			//printf("---test3_A---\n");
 			
 			pb(deque_a, deque_b);
 		}
 
-		p = deque_a->front;
-		while (p)
-		{
-			printf("%d ", p->data);
-			p = p->next;
-		}
-		printf("---test2_A---\n");
+		// p = deque_a->front;
+		// while (p)
+		// {
+		// 	printf("%d ", p->data);
+		// 	p = p->next;
+		// }
+		//printf("---test2_A---\n");
 
 		sort_3(deque_a);
 		while (deque_b->front)
@@ -169,21 +169,21 @@ void	sort_5(t_deque *deque_a, t_deque *deque_b)
 		}
 	}
 
-	p = deque_a->front;
-	while (p)
-	{
-		printf("%d ", p->data);
-		p = p->next;
-	}
-	printf("---sort5_A---\n");
+	// p = deque_a->front;
+	// while (p)
+	// {
+	// 	printf("%d ", p->data);
+	// 	p = p->next;
+	// }
+	// printf("---sort5_A---\n");
 
-	p = deque_b->front;
-	while (p)
-	{
-		printf("%d ", p->data);
-		p = p->next;
-	}
-	printf("---sort5_B---\n");
+	// p = deque_b->front;
+	// while (p)
+	// {
+	// 	printf("%d ", p->data);
+	// 	p = p->next;
+	// }
+	// printf("---sort5_B---\n");
 }
 
 
