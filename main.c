@@ -6,7 +6,7 @@
 /*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 18:18:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 06:15:09 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/18 06:23:30 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int	main(int ac, char **av)
 	// 	p = p->next;
 	// }
 	// printf("---result sort5_B---\n");
-	
+	free_deque(deque_a);
+	free_deque(deque_b);
 	return (0);
 }

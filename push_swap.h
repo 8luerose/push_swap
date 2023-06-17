@@ -6,7 +6,7 @@
 /*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:46:37 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 01:32:46 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/18 06:23:01 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	sb(t_deque *deque_b);
 void	ss(t_deque *deque_a, t_deque *deque_b);
 int		find_data_front(t_deque *deque);
 int		find_data_back(t_deque *deque);
+void	free_deque(t_deque *deque);
 void	print_error(void);
 int		ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
