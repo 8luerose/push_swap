@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 18:18:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 06:23:30 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/18 15:25:36 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	main(int ac, char **av)
 	int		*arr;
 	t_deque	*deque_a;
 	t_deque	*deque_b;
-	int		i;
-	t_node	*p;
+	//int		i;
+	//t_node	*p;
 
 	if (ac < 2)
 		print_error();

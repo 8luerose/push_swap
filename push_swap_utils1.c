@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils1.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 20:15:32 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 05:05:09 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/18 18:03:52 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,13 @@
 void	a_to_b(t_deque *a, t_deque *b, int chunk, int i)
 {
 	int	data;
+	int pos;
 
 	while (a->size != 0)
 	{
-		data = find_data_front(a);
+		pos = 0;
+		data = a->front->data;  // save the data at the front of deque_a
+
 		if (data <= i)
 		{
 			pb(a, b);
@@ -32,10 +35,12 @@ void	a_to_b(t_deque *a, t_deque *b, int chunk, int i)
 		}
 		else if (data > (i + chunk))
 		{
-			if (i >= 0 && (i < (a->size / 2)))
-				rra(a);
-			else
+			// determine the direction of rotation based on the current position of data
+			if (pos <= a->size / 2)
 				ra(a);
+			else
+				rra(a);
+			pos++;  // increase the current position of data
 		}
 	}
 }
