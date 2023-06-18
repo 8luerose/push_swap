@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 20:15:32 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 18:03:52 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/18 21:02:32 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,36 @@ void	a_to_b(t_deque *a, t_deque *b, int chunk, int i)
 		else if (data > (i + chunk))
 		{
 			// determine the direction of rotation based on the current position of data
-			if (pos <= a->size / 2)
+			if (search_fit_rank(a, i + chunk) > 0)
 				ra(a);
 			else
 				rra(a);
 			pos++;  // increase the current position of data
 		}
+		// else if (data > (i + chunk))
+		// {
+		// 	// determine the direction of rotation based on the current position of data
+		// 	if (pos < a->size / 2)
+		// 		ra(a);
+		// 	else
+		// 		rra(a);
+		// 	pos++;  // increase the current position of data
+		// }
 	}
+}
+
+int	search_fit_rank(t_deque *a, int fit)
+{
+	t_node	*temp;
+	int		i;
+
+	i = 0;
+	temp = a->front;
+	while (temp->data > fit && ++i)
+		temp = temp->next;
+	if (i <= a->size / 2)
+		return (1);
+	return (-1);
 }
 
 /*

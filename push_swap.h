@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:46:37 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 19:38:11 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/18 21:02:05 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,6 @@ void	a_to_b(t_deque *a, t_deque *b, int chunk, int i);
 int		max_location(t_deque *b, int max);
 void	b_to_a(t_deque *a, t_deque *b, int max);
 
+
+int		search_fit_rank(t_deque *a, int fit);
 #endif
