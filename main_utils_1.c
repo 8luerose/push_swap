@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/15 19:09:31 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/18 19:49:32 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,15 @@ int	*split_to_atoi(int ac, char **av, t_deque *deque_a)
 		str = ft_split(av[i], ' ');
 		if (!str)
 			return (NULL);
+		if (*str == NULL)
+			print_error();
 		j = -1;
 		while (str[++j])
+		{
+			if (ft_strcmp(str[j], "-") == 0 || ft_strcmp(str[j], "+") == 0)
+				print_error();
 			push_back(deque_a, ft_atoi(str[j]));
+		}
 	}
 	result = making_arr(deque_a);
 	return (result);
@@ -53,6 +59,20 @@ int	*making_arr(t_deque *deque_a)
 	return (result);
 }
 
+static int	check_duplicaton(int *arr, t_deque *deque_a)
+{
+	int	i;
+
+	i = 0;
+	while (i < deque_a->size - 1)
+	{
+		if (arr[i] == arr[i + 1])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 void	check_sort(int *arr, t_deque *deque_a, int i)
 {
 	int	j;
@@ -74,12 +94,12 @@ void	check_sort(int *arr, t_deque *deque_a, int i)
 			}
 			j++;
 		}
-		if (arr[i] == arr[i + 1])
-			print_error();
 		i++;
 	}
-	if (cnt == 0)
+	if (check_duplicaton(arr, deque_a) == 1)
 		print_error();
+	if (cnt == 0)
+		exit(1);
 }
 
 void	indexing_list(int *arr, t_deque *deque_a)
