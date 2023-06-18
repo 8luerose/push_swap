@@ -6,7 +6,7 @@
 /*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:10:39 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 05:24:57 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/19 01:42:52 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	sa(t_deque *deque_a)
 
 void	sb(t_deque *deque_b)
 {
-	//sa(deque_b);
 	int	tmp;
 
 	if (deque_b->size > 1)
@@ -41,8 +40,6 @@ void	sb(t_deque *deque_b)
 
 void	ss(t_deque *deque_a, t_deque *deque_b)
 {
-	// sa(deque_a);
-	// sb(deque_b);
 	int	tmp;
 
 	if (deque_a->size > 1)

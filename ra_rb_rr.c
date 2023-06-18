@@ -6,7 +6,7 @@
 /*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 19:36:01 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 05:24:15 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/19 01:42:36 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ void	rb(t_deque *deque_b)
 
 void	rr(t_deque *deque_a, t_deque *deque_b)
 {
-	// ra(deque_a);
-	// rb(deque_b);
 	int	node_data;
 
 	if (deque_a->size > 1)

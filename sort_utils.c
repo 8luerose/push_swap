@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:04:50 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 16:33:03 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 01:44:54 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 static int	find_index(t_deque *deque, int data)
 {
-	int		index;
+	int		i;
 	t_node	*p;
 
 	p = deque->front;
-	index = 0;
+	i = 0;
 	while (p)
 	{
 		if (p->data == data)
-			return (index);
+			return (i);
 		p = p->next;
-		index++;
+		i++;
 	}
 	return (-1);
 }
@@ -43,7 +43,6 @@ int	ft_max(t_deque *deque)
 		if (p->data > max)
 			max = p->data;
 		p = p->next;
-		//printf("***%d\n", max);
 	}
 	return (max);
 }
@@ -110,13 +109,3 @@ void	sort_5(t_deque *deque_a, t_deque *deque_b)
 	while (deque_b->front)
 		pa(deque_a, deque_b);
 }
-
-
-
-
-//3 1 2 -> 1 2 3
-//3 2 1 -> 2 1 3 -> 1 2 3
-//1 3 2 -> 2 1 3 -> 1 2 3
-//1 2 3
-//2 1 3 -> 1 2 3
-//2 3 1 -> 1 2 3

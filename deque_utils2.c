@@ -6,7 +6,7 @@
 /*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:06:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 06:22:50 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/19 01:34:20 by rose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,18 @@ int	find_data_back(t_deque *deque)
 
 void	free_deque(t_deque *deque) 
 {
+    t_node *p;
     t_node *tmp;
-    t_node *next;
 
-    if (!deque) {
-        return;
+    if (!deque)
+        return ;
+    p = deque->front;
+    while (p) 
+	{
+        tmp = p->next;
+        free(p);
+        p = tmp;
     }
-
-    tmp = deque->front;
-
-    while (tmp != NULL) {
-        next = tmp->next;
-        free(tmp);
-        tmp = next;
-    }
-
     free(deque);
 }
 
