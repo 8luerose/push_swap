@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/18 19:49:32 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 19:33:00 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	*split_to_atoi(int ac, char **av, t_deque *deque_a)
 				print_error();
 			push_back(deque_a, ft_atoi(str[j]));
 		}
+		free_split(str, j);
 	}
 	result = making_arr(deque_a);
 	return (result);

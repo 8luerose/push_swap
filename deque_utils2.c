@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   deque_utils2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:06:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 01:34:20 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/19 19:06:35 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,21 @@ int	find_data_back(t_deque *deque)
 	return (temp);
 }
 
-void	free_deque(t_deque *deque) 
+void	free_deque(t_deque *deque)
 {
-    t_node *p;
-    t_node *tmp;
+	t_node	*p;
+	t_node	*tmp;
 
-    if (!deque)
-        return ;
-    p = deque->front;
-    while (p) 
+	if (!deque)
+		return ;
+	p = deque->front;
+	while (p)
 	{
-        tmp = p->next;
-        free(p);
-        p = tmp;
-    }
-    free(deque);
+		tmp = p->next;
+		free(p);
+		p = tmp;
+	}
+	free(deque);
 }
 
 void	print_error(void)

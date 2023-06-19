@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils1.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 20:15:32 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 01:42:26 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/19 19:03:46 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,10 @@
 void	a_to_b(t_deque *a, t_deque *b, int chunk, int i)
 {
 	int	data;
-	int pos;
 
 	while (a->size != 0)
 	{
-		//pos = 0;
 		data = a->front->data;
-
 		if (data <= i)
 		{
 			pb(a, b);
@@ -39,7 +36,6 @@ void	a_to_b(t_deque *a, t_deque *b, int chunk, int i)
 				ra(a);
 			else
 				rra(a);
-			//pos++;
 		}
 	}
 }

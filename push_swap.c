@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 20:11:16 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 01:30:10 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/19 19:04:09 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void push_swap(t_deque *deque_a, t_deque *deque_b)
+void	push_swap(t_deque *deque_a, t_deque *deque_b)
 {
-	int chunk;
-	int max;
-	int min;
-	int i;
+	int	chunk;
+	int	max;
+	int	min;
+	int	i;
 
 	if (deque_a->size <= 3)
 		sort_3(deque_a);

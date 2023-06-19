@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rose <rose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:46:37 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 01:39:32 by rose             ###   ########.fr       */
+/*   Updated: 2023/06/19 19:34:21 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,6 @@ void	a_to_b(t_deque *a, t_deque *b, int chunk, int i);
 int		max_location(t_deque *b, int max);
 void	b_to_a(t_deque *a, t_deque *b, int max);
 int		chunk_rotate(t_deque *deque, int chunk_value);
+void	free_split(char **s, int i);
+
 #endif

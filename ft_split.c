@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 19:43:49 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/14 20:35:29 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 19:34:12 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static char	*next_word(char **s, char c)
 	return (word);
 }
 
-static void	free_split(char **s, int i)
+void	free_split(char **s, int i)
 {
 	while (i >= 0)
 	{
