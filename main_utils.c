@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_utils_1.c                                     :+:      :+:    :+:   */
+/*   main_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 19:33:00 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 20:20:58 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	*split_to_atoi(int ac, char **av, t_deque *deque_a)
 		j = -1;
 		while (str[++j])
 		{
-			if (ft_strcmp(str[j], "-") == 0 || ft_strcmp(str[j], "+") == 0)
+			if (!ft_strncmp(str[j], "-", j) || !ft_strncmp(str[j], "+", j))
 				print_error();
 			push_back(deque_a, ft_atoi(str[j]));
 		}
