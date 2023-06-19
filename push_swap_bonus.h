@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:55:03 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 20:26:10 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 20:45:56 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ int		max_location(t_deque *b, int max);
 void	b_to_a(t_deque *a, t_deque *b, int max);
 int		chunk_rotate(t_deque *deque, int chunk_value);
 void	checker_comand(t_deque *deque_a, t_deque *deque_b, char *line, int n);
+void	ft_putstr(char *s);
 
 #endif
