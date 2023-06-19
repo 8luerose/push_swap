@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:55:03 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 20:45:56 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 21:52:02 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include "get_next_line.h"
+# include "../get_next_line/get_next_line.h"
 
 typedef struct s_node
 {
@@ -37,17 +37,17 @@ void	push_front(t_deque *deque, int data);
 void	push_back(t_deque *deque, int data);
 void	pop_front(t_deque *deque);
 void	pop_back(t_deque *deque);
-void	pa(t_deque *deque_a, t_deque *deque_b);
-void	pb(t_deque *deque_a, t_deque *deque_b);
-void	ra(t_deque *deque_a);
-void	rb(t_deque *deque_b);
-void	rr(t_deque *deque_a, t_deque *deque_b);
-void	rra(t_deque *deque_a);
-void	rrb(t_deque *deque_b);
-void	rrr(t_deque *deque_a, t_deque *deque_b);
-void	sa(t_deque *deque_a);
-void	sb(t_deque *deque_b);
-void	ss(t_deque *deque_a, t_deque *deque_b);
+void	pa_bonus(t_deque *deque_a, t_deque *deque_b);
+void	pb_bonus(t_deque *deque_a, t_deque *deque_b);
+void	ra_bonus(t_deque *deque_a);
+void	rb_bonus(t_deque *deque_b);
+void	rr_bonus(t_deque *deque_a, t_deque *deque_b);
+void	rra_bonus(t_deque *deque_a);
+void	rrb_bonus(t_deque *deque_b);
+void	rrr_bonus(t_deque *deque_a, t_deque *deque_b);
+void	sa_bonus(t_deque *deque_a);
+void	sb_bonus(t_deque *deque_b);
+void	ss_bonus(t_deque *deque_a, t_deque *deque_b);
 int		find_data_front(t_deque *deque);
 int		find_data_back(t_deque *deque);
 void	free_deque(t_deque *deque);
@@ -56,7 +56,7 @@ int		ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
 void	free_split(char **s, int i);
 char	*ft_strchr(const char *s, int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -74,7 +74,10 @@ void	a_to_b(t_deque *a, t_deque *b, int chunk, int i);
 int		max_location(t_deque *b, int max);
 void	b_to_a(t_deque *a, t_deque *b, int max);
 int		chunk_rotate(t_deque *deque, int chunk_value);
-void	checker_comand(t_deque *deque_a, t_deque *deque_b, char *line, int n);
+int		check_duplicaton(int *arr, t_deque *deque_a);
+void	checker(int *arr, t_deque *deque_a, t_deque *deque_b);
+void	checker_comand(t_deque *deque_a, t_deque *deque_b, char *line);
 void	ft_putstr(char *s);
+void	is_sorted(int *arr, t_deque *deque_a);
 
 #endif

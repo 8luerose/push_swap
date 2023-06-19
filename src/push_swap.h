@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:46:37 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 20:19:30 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 21:18:24 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int		ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
 void	free_split(char **s, int i);
 char	*ft_strchr(const char *s, int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

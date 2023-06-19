@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_utils.c                                       :+:      :+:    :+:   */
+/*   main_utils_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 20:20:58 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 21:49:39 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 int	*split_to_atoi(int ac, char **av, t_deque *deque_a)
 {
@@ -30,7 +30,7 @@ int	*split_to_atoi(int ac, char **av, t_deque *deque_a)
 		j = -1;
 		while (str[++j])
 		{
-			if (!ft_strncmp(str[j], "-", j) || !ft_strncmp(str[j], "+", j))
+			if (!ft_strcmp(str[j], "-") || !ft_strcmp(str[j], "+"))
 				print_error();
 			push_back(deque_a, ft_atoi(str[j]));
 		}
@@ -60,7 +60,7 @@ int	*making_arr(t_deque *deque_a)
 	return (result);
 }
 
-static int	check_duplicaton(int *arr, t_deque *deque_a)
+int	check_duplicaton(int *arr, t_deque *deque_a)
 {
 	int	i;
 
@@ -99,8 +99,6 @@ void	check_sort(int *arr, t_deque *deque_a, int i)
 	}
 	if (check_duplicaton(arr, deque_a) == 1)
 		print_error();
-	if (cnt == 0)
-		exit(1);
 }
 
 void	indexing_list(int *arr, t_deque *deque_a)

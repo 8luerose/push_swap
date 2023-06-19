@@ -6,13 +6,13 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 18:03:57 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 20:43:11 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/19 21:39:53 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-void	pa(t_deque *deque_a, t_deque *deque_b)
+void	pa_bonus(t_deque *deque_a, t_deque *deque_b)
 {
 	t_node	*p;
 
@@ -35,7 +35,7 @@ void	pa(t_deque *deque_a, t_deque *deque_b)
 	}
 }
 
-void	pb(t_deque *deque_a, t_deque *deque_b)
+void	pb_bonus(t_deque *deque_a, t_deque *deque_b)
 {
 	t_node	*p;
 
