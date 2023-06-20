@@ -1,9 +1,6 @@
-
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-
-#AR = ar
-#ARFLAGS = cr
+INCLUDES = -I includes
 RM = rm -f
 NAME = push_swap
 NAME_BONUS = checker
@@ -50,19 +47,16 @@ SRCS_BONUS = bonus/deque_utils1_bonus.c				\
 			get_next_line/get_next_line.c			
 
 OBJS = $(SRCS:.c=.o)
-
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all : $(NAME)
 bonus : $(NAME_BONUS)
-#bonus : make_bonus
 
 %.o : %.c
-	$(CC) $(CFLAG) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
 clean :
 	$(RM) $(OBJS) $(OBJS_BONUS)
-#	$(RM) make_bonus
 
 fclean : clean
 	$(RM) $(NAME) $(NAME_BONUS)
@@ -70,11 +64,9 @@ fclean : clean
 re : fclean all
 
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $^
-#	@touch $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) 
 
-${NAME_BONUS} : $(OBJS_BONUS)
-	$(CC) $(CFLAGS) -o $(NAME) $^
-#	@touch make_bonus
+$(NAME_BONUS) : $(OBJS_BONUS)
+	$(CC) $(CFLAGS) $(OBJS_BONUS) -o $(NAME_BONUS)
 
 .PHONY : all clean fclean re bonus
