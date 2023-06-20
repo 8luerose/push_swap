@@ -23,7 +23,6 @@ SRCS =  src/deque_utils1.c		\
 		src/pa_pb.c				\
 		src/push_swap_utils.c	\
 		src/push_swap.c			\
-		src/push_swap.h			\
 		src/ra_rb_rr.c			\
 		src/rra_rrb_rrr.c		\
 		src/sa_sb_ss.c			\
@@ -43,14 +42,12 @@ SRCS_BONUS = bonus/deque_utils1_bonus.c				\
 			bonus/main_utils_bonus.c				\
 			bonus/pa_pb_bonus.c						\
 			bonus/push_swap_bonus.c					\
-			bonus/push_swap_bonus.h					\
 			bonus/push_swap_utils_bonus.c			\
 			bonus/ra_rb_rr_bonus.c					\
 			bonus/rra_rrb_rrr_bonus.c				\
 			bonus/sa_sb_ss_bonus.c					\
 			get_next_line/get_next_line_utils.c		\
-			get_next_line/get_next_line.c			\
-			get_next_line/get_next_line.h
+			get_next_line/get_next_line.c			
 
 OBJS = $(SRCS:.c=.o)
 
