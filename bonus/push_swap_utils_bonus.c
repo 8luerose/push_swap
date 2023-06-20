@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 20:35:30 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 21:49:49 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:49:28 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_putstr(char *s)
 {
 	int	len;
 
+	len = 0;
 	while (s[len])
 		len++;
 	if (!s)
@@ -23,11 +24,9 @@ void	ft_putstr(char *s)
 	write (1, s, len);
 }
 
-void	is_sorted(int *arr, t_deque *deque_a)
+int	is_sorted(int *arr, t_deque *deque_a)
 {
 	int		i;
-	int		j;
-	int		tmp;
 	t_node	*p;
 
 	i = 0;

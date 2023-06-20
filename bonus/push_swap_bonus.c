@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:54:58 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 21:48:11 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:48:09 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	checker_comand(t_deque *deque_a, t_deque *deque_b, char *line)
 void	checker(int *arr, t_deque *deque_a, t_deque *deque_b)
 {
 	char	*line;
-	int		i;
 
 	line = get_next_line(0);
 	while (line)
@@ -54,7 +53,7 @@ void	checker(int *arr, t_deque *deque_a, t_deque *deque_b)
 	}
 	if (line)
 		free(line);
-	if (is_sort(arr, deque_a))
+	if (is_sorted(arr, deque_a))
 		return (ft_putstr("OK\n"));
 	else
 		return (ft_putstr("KO\n"));

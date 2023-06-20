@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:55:03 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 21:52:02 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:49:14 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,19 +65,10 @@ int		*split_to_atoi(int ac, char **av, t_deque *deque_a);
 int		*making_arr(t_deque *deque_a);
 void	check_sort(int *arr, t_deque *deque_a, int i);
 void	indexing_list(int *arr, t_deque *deque_a);
-int		ft_max(t_deque *deque);
-int		ft_min(t_deque *deque);
-void	sort_3(t_deque *deque);
-void	sort_5(t_deque *deque_a, t_deque *deque_b);
-void	push_swap(t_deque *a, t_deque *b);
-void	a_to_b(t_deque *a, t_deque *b, int chunk, int i);
-int		max_location(t_deque *b, int max);
-void	b_to_a(t_deque *a, t_deque *b, int max);
-int		chunk_rotate(t_deque *deque, int chunk_value);
 int		check_duplicaton(int *arr, t_deque *deque_a);
 void	checker(int *arr, t_deque *deque_a, t_deque *deque_b);
 void	checker_comand(t_deque *deque_a, t_deque *deque_b, char *line);
 void	ft_putstr(char *s);
-void	is_sorted(int *arr, t_deque *deque_a);
+int		is_sorted(int *arr, t_deque *deque_a);
 
 #endif

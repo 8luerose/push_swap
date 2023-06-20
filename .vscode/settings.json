@@ -12,6 +12,7 @@
 		"initializer_list": "c",
 		"unordered_map": "c",
 		"utility": "c",
-		"vector": "c"
+		"vector": "c",
+		"push_swap_bonus.h": "c"
 	}
 }
