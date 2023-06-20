@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 19:59:21 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/20 20:20:37 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/20 20:26:05 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include "./get_next_line.h"
+# include "get_next_line.h"
 
 typedef struct s_node
 {
