@@ -6,13 +6,13 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:54:58 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/20 16:48:09 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:19:55 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-void	checker_comand(t_deque *deque_a, t_deque *deque_b, char *line)
+void	checker_command(t_deque *deque_a, t_deque *deque_b, char *line)
 {
 	if (ft_strcmp(line, "ra\n") == 0)
 		ra_bonus(deque_a);
@@ -40,20 +40,20 @@ void	checker_comand(t_deque *deque_a, t_deque *deque_b, char *line)
 		print_error();
 }
 
-void	checker(int *arr, t_deque *deque_a, t_deque *deque_b)
+void	checker(t_deque *deque_a, t_deque *deque_b)
 {
 	char	*line;
 
 	line = get_next_line(0);
 	while (line)
 	{
-		checker_comand(deque_a, deque_b, line);
+		checker_command(deque_a, deque_b, line);
 		free(line);
 		line = get_next_line(0);
 	}
 	if (line)
 		free(line);
-	if (is_sorted(arr, deque_a))
+	if (is_sorted(deque_a))
 		return (ft_putstr("OK\n"));
 	else
 		return (ft_putstr("KO\n"));

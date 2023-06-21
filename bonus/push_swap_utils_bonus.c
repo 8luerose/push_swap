@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 20:35:30 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/20 16:49:28 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:35:31 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putstr(char *s)
 	write (1, s, len);
 }
 
-int	is_sorted(int *arr, t_deque *deque_a)
+int	is_sorted(t_deque *deque_a)
 {
 	int		i;
 	t_node	*p;
@@ -38,7 +38,5 @@ int	is_sorted(int *arr, t_deque *deque_a)
 		p = p->next;
 		i++;
 	}
-	if (check_duplicaton(arr, deque_a) == 1)
-		print_error();
 	return (1);
 }

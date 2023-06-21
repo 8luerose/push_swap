@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 19:31:35 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/19 21:30:04 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/21 14:33:21 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	*making_arr(t_deque *deque_a)
 	return (result);
 }
 
-static int	check_duplicaton(int *arr, t_deque *deque_a)
+int	check_duplicaton(int *arr, t_deque *deque_a)
 {
 	int	i;
 

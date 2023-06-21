@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 19:59:21 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/20 20:26:05 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:20:49 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,9 @@ int		max_location(t_deque *b, int max);
 void	b_to_a(t_deque *a, t_deque *b, int max);
 int		chunk_rotate(t_deque *deque, int chunk_value);
 int		check_duplicaton(int *arr, t_deque *deque_a);
-void	checker(int *arr, t_deque *deque_a, t_deque *deque_b);
-void	checker_comand(t_deque *deque_a, t_deque *deque_b, char *line);
+void	checker(t_deque *deque_a, t_deque *deque_b);
+void	checker_command(t_deque *deque_a, t_deque *deque_b, char *line);
 void	ft_putstr(char *s);
-int		is_sorted(int *arr, t_deque *deque_a);
+int		is_sorted(t_deque *deque_a);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 18:18:12 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/20 17:09:20 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:36:29 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int ac, char **av)
 	t_deque	*deque_b;
 
 	if (ac < 2)
-		print_error();
+		return (-1);
 	deque_a = deque_init();
 	deque_b = deque_init();
 	arr = split_to_atoi(ac, av, deque_a);
@@ -46,7 +46,7 @@ int	main(int ac, char **av)
 	t_deque	*deque_b;
 
 	if (ac < 2)
-		print_error();
+		return (-1);
 	deque_a = deque_init();
 	deque_b = deque_init();
 	arr = split_to_atoi(ac, av, deque_a);
