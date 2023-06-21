@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:54:58 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/21 15:19:55 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/21 16:34:29 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	checker(t_deque *deque_a, t_deque *deque_b)
 	}
 	if (line)
 		free(line);
-	if (is_sorted(deque_a))
+	if (is_sorted(deque_a, deque_b))
 		return (ft_putstr("OK\n"));
 	else
 		return (ft_putstr("KO\n"));

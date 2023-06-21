@@ -6,7 +6,7 @@
 /*   By: taehkwon <taehkwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 20:35:30 by taehkwon          #+#    #+#             */
-/*   Updated: 2023/06/21 15:35:31 by taehkwon         ###   ########.fr       */
+/*   Updated: 2023/06/21 16:34:27 by taehkwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ void	ft_putstr(char *s)
 	write (1, s, len);
 }
 
-int	is_sorted(t_deque *deque_a)
+int	is_sorted(t_deque *deque_a, t_deque *deque_b)
 {
 	int		i;
 	t_node	*p;
 
+	if (deque_b->size > 0)
+		return (0);
 	i = 0;
 	p = deque_a->front;
 	while (i < deque_a->size - 1)
