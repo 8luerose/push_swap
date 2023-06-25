@@ -69,4 +69,4 @@ $(NAME) : $(OBJS)
 $(NAME_BONUS) : $(OBJS_BONUS)
 	$(CC) $(CFLAGS) $(OBJS_BONUS) -o $(NAME_BONUS)
 
-.PHONY : all clean fclean re bonus 
+.PHONY : all clean fclean re bonus
