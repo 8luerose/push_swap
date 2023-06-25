@@ -43,8 +43,8 @@ SRCS_BONUS = bonus/deque_utils1_bonus.c				\
 			bonus/ra_rb_rr_bonus.c					\
 			bonus/rra_rrb_rrr_bonus.c				\
 			bonus/sa_sb_ss_bonus.c					\
-			get_next_line/get_next_line_utils.c		\
-			get_next_line/get_next_line.c			
+			get_next_line_bonus/get_next_line_utils_bonus.c		\
+			get_next_line_bonus/get_next_line_bonus.c			
 
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
